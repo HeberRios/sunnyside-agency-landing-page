@@ -129,7 +129,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--ff-headings);
     font-weight: var(--fw-black);
 }
@@ -314,6 +315,51 @@ h1 {
 }
 
 .service-feature > section > p {
+    font-size: 0.9375rem;
+}
+
+/* TESTIMONIALS SECTION STYLES */
+#testimonials {
+    padding: 4rem 1.5rem 6rem 1.5rem;
+}
+
+#testimonials > h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    color: var(--clr-grayish-blue);
+    margin-bottom: 5rem;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.testimonials-wrapper > article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.testimonials-wrapper > article > img {
+    max-width: 4.75rem;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.testimonials-wrapper > article > h3 {
+    font-family: var(--ff-regular);
+    font-size: var(--fs-regular);
+    color: var(--clr-very-dark-grayish-blue);
+    line-height: 1.85;
+}
+
+.testimonials-wrapper > article > footer > span {
+    color: var(--clr-grayish-blue);
     font-size: 0.9375rem;
 }
 
