@@ -363,6 +363,13 @@ h1 {
     font-size: 0.9375rem;
 }
 
+/* GALLERY GRID STYLES */
+
+#gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
 /* ATTRIBUTION STYLES */
 
 .attribution {
