@@ -163,6 +163,7 @@ a:visited {
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem 1.5rem 0 1.5rem;
 }
 
@@ -187,11 +188,14 @@ h1 {
 /* HEADER NAV MENU STYLES */
 
 .header-nav {
+    max-width: 28.125rem;
     width: calc(100% - 3rem);
     position: absolute;
     top: calc(100% + 3rem);
+    right: calc(0% + 1.5rem);
     background-color: var(--clr-white);
     padding: 2.5rem 0;
+    display: none;
 }
 
 .header-nav > ul {
@@ -423,6 +427,45 @@ h1 {
     color: hsl(228, 99%, 70%);
 }
 
-.hidden {
-    display: none;
+@media (min-width: 38.0625rem) {
+    #header {
+        background-image: url("../assets/images/desktop/image-header.jpg");
+    }
+
+    #hero {
+        margin-bottom: 15rem;
+    }
+}
+
+@media (min-width: 42.1875rem) {
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .header-nav {
+        width: auto;
+        position: relative;
+        top: 0;
+        right: 0;
+        display: block;
+        background-color: unset;
+        padding: 0;
+    }
+
+    .header-nav::after {
+        display: none;
+    }
+
+    .header-nav > ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .header-nav-link {
+        color: var(--clr-white);
+    }
+
+    .header-nav > ul > li:last-child > .header-nav-link {
+        background-color: var(--clr-white);
+    }
 }
