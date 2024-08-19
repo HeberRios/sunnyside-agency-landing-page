@@ -251,11 +251,12 @@ h1 {
 }
 
 .learn-more-article > section > h3 {
-    font-size: 2rem;
+    font-size: clamp(2rem, 3.5dvw, 3rem);
     line-height: 1.25;
 }
 
 .learn-more-article > section > p {
+    font-size: clamp(1rem, 1.6dvw, 1.25rem);
     color: var(--clr-dark-grayish-blue);
 }
 
@@ -263,7 +264,7 @@ h1 {
     position: relative;
     font-family: var(--ff-headings);
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1.7dvw, 1.125rem);
     font-weight: var(--fw-black);
     letter-spacing: 0.075rem;
     color: inherit;
@@ -295,9 +296,17 @@ h1 {
 
 .service-feature {
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.learn-more-article > header > picture > img,
+.service-feature > header > picture > img {
+    width: 100%;
 }
 
 .service-feature > section {
+    max-width: 26.25rem;
     position: absolute;
     top: 100%;
     transform: translate(0, -100%);
@@ -306,6 +315,7 @@ h1 {
     gap: 1.65rem;
     text-align: center;
     padding: 0 1.5rem 4rem 1.5rem;
+    align-self: center;
 }
 
 .service-feature:nth-child(3) > section {
@@ -316,11 +326,11 @@ h1 {
 }
 
 .service-feature > section > h3 {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 5dvw, 2.25rem);
 }
 
 .service-feature > section > p {
-    font-size: 0.9375rem;
+    font-size: clamp(0.9375rem, 1.4dvw, 1.125rem);
 }
 
 /* TESTIMONIALS SECTION STYLES */
@@ -467,5 +477,60 @@ h1 {
 
     .header-nav > ul > li:last-child > .header-nav-link {
         background-color: var(--clr-white);
+    }
+}
+
+@media (min-width: 52.5625rem) {
+    .learn-more-article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learn-more-article:first-child > :first-child {
+        grid-column: 2;
+    }
+
+    .learn-more-article:first-child > :last-child {
+        grid-row: 1;
+    }
+
+    .learn-more-article > header > picture,
+    .learn-more-article > header > picture > img {
+        height: 100%;
+    }
+
+    .learn-more-article > section {
+        max-width: 550px;
+        justify-self: center;
+        align-self: center;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .learn-more-link {
+        align-self: start;
+    }
+
+    .service-feature > section > p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 65.9375rem) {
+    #article-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #article-grid > article:first-child {
+        grid-column: 1/-1;
+    }
+
+    #article-grid > article:nth-child(2) {
+        grid-column: 1/-1;
+    }
+
+    .service-feature > section > p {
+        font-size: clamp(0.9375rem, 1.5dvw, 1.125rem);
     }
 }
