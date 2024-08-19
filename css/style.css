@@ -335,11 +335,14 @@ h1 {
 
 /* TESTIMONIALS SECTION STYLES */
 #testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 4rem 1.5rem 6rem 1.5rem;
 }
 
 #testimonials > h2 {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2dvw, 1.25rem);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     text-align: center;
@@ -354,6 +357,7 @@ h1 {
 }
 
 .testimonials-wrapper > article {
+    max-width: 37.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -383,6 +387,10 @@ h1 {
 #gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+#gallery-grid > picture > img {
+    width: 100%;
 }
 
 /* FOOTER SECTION STYLES */
@@ -500,7 +508,7 @@ h1 {
     }
 
     .learn-more-article > section {
-        max-width: 550px;
+        max-width: 34.375rem;
         justify-self: center;
         align-self: center;
         gap: 3rem;
@@ -532,5 +540,27 @@ h1 {
 
     .service-feature > section > p {
         font-size: clamp(0.9375rem, 1.5dvw, 1.125rem);
+    }
+
+    #gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #footer {
+        padding: 6rem 1.5rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    #testimonials {
+        padding: 10rem 3rem;
+    }
+    .testimonials-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .testimonials-wrapper > article {
+        max-width: 25.5rem;
     }
 }
