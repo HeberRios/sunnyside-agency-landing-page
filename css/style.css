@@ -126,7 +126,7 @@ h6 {
 /* GENERAL STYLES */
 
 *:focus {
-    outline: 0.25rem solid var(--clr-dark-moderate-cyan);
+    outline: 0.25rem solid var(--clr-soft-red);
     outline-offset: 0.25rem;
 }
 
