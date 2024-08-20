@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
--   [Live Site URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/agency-landing-page-ZC2HoXTsIl)
+-   [Live Site URL](https://heberrios.github.io/sunnyside-agency-landing-page/)
 
 ## My process
 
